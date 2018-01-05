@@ -6,6 +6,9 @@ description: |
   Plex organizes all of your personal media so you can easily
   access and enjoy it. See https://www.plex.tv/
 
+confinement: strict
+grade: stable
+
 apps:
   plexmediaserver:
     command: bin/server.sh
@@ -15,9 +18,6 @@ apps:
       - network-bind
       - removable-media
       - home
-
-confinement: strict
-grade: stable
 
 parts:
   plexmediaserver:
