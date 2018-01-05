@@ -23,9 +23,11 @@ parts:
   plexmediaserver:
     plugin: dump
     source: https://downloads.plex.tv/plex-media-server/$SNAPCRAFT_PROJECT_VERSION/plexmediaserver_$SNAPCRAFT_PROJECT_VERSION_amd64.deb
-    install: |
-      rm -f etc/init.d/plexmediaserver
-      rm -f ../install/etc/init.d/plexmediaserver
+    prepare: |
+      rm -rf etc/apt
+      rm -rf etc/init
+      rm -rf etc/init.d
+      rm -rf lib/systemd
   wrapper:
     plugin: dump
     source: files/
