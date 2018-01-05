@@ -15,9 +15,9 @@ apps:
     daemon: simple
     restart-condition: always
     plugs:
+      - home
       - network-bind
       - removable-media
-      - home
 
 parts:
   plexmediaserver:
