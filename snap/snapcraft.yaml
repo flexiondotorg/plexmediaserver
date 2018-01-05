@@ -1,4 +1,4 @@
-name: menta-plexmediaserver
+name: plexmediaserver
 version: 1.10.0.4523
 summary: Unofficial snap for the Plex media server for the amd64 architecture
 architectures: [amd64]
@@ -7,8 +7,7 @@ description: |
   access and enjoy it. See https://www.plex.tv/
 
 apps:
-
-  server:
+  plexmediaserver:
     command: bin/server.sh
     daemon: simple
     restart-condition: always
@@ -21,8 +20,7 @@ confinement: strict
 grade: stable
 
 parts:
-
-  server:
+  plexmediaserver:
     plugin: dump
     source: https://downloads.plex.tv/plex-media-server/1.10.0.4523-648bc61d4/plexmediaserver_1.10.0.4523-648bc61d4_amd64.deb
     install: |
