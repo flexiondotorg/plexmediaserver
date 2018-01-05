@@ -11,7 +11,7 @@ grade: stable
 
 apps:
   plexmediaserver:
-    command: bin/server.sh
+    command: bin/wrapper.sh
     daemon: simple
     restart-condition: always
     plugs:
@@ -26,8 +26,8 @@ parts:
     install: |
       rm -f etc/init.d/plexmediaserver
       rm -f ../install/etc/init.d/plexmediaserver
-
-  server-configurations:
+  wrapper:
     plugin: dump
-    prime:
-      - bin/server.sh
+    source: files/
+    prepare: |
+      chmod +x bin/wrapper.sh
