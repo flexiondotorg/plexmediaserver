@@ -1,10 +1,10 @@
 name: plexmediaserver
-version: 1.10.1.4602-f54242b6b
-summary: Unofficial snap for the Plex media server for the amd64 architecture
+version: '1.10.1.4602-f54242b6b'
+summary: Your media on all your devices.
 architectures: [amd64]
 description: |
-  Plex organizes all of your personal media so you can easily
-  access and enjoy it. See https://www.plex.tv/
+  Plex makes it possible to enjoy all of your media, whether in your living
+  room, the car, or on a boat in the South Pacific!
 
 confinement: strict
 grade: stable
