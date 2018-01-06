@@ -28,6 +28,7 @@ parts:
       rm -rf etc/init
       rm -rf etc/init.d
       rm -rf lib/systemd
+      sed -i 's|Icon=plexmediamanager|Icon=/usr/share/pixmaps/plexmediamanager\.png|' usr/share/applications/plexmediamanager.desktop
   wrapper:
     plugin: dump
     source: files/
