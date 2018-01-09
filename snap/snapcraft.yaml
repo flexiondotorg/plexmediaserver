@@ -5,6 +5,8 @@ architectures: [amd64]
 description: |
   Plex makes it possible to enjoy all of your media, whether in your living
   room, the car, or on a boat in the South Pacific!
+  .
+  You can manage your media by browsing to http://localhost:32400/manage
 
 confinement: strict
 grade: stable
@@ -25,10 +27,10 @@ parts:
     plugin: dump
     source: https://downloads.plex.tv/plex-media-server/$SNAPCRAFT_PROJECT_VERSION/plexmediaserver_$SNAPCRAFT_PROJECT_VERSION_amd64.deb
     prepare: |
-      rm -rf etc/apt
-      rm -rf etc/init
-      rm -rf etc/init.d
-      rm -rf lib/systemd
+      rm -rf etc
+      rm -rf lib
+      rm -rf usr/sbin
+      rm -rf usr/share/doc
       sed -i 's|Icon=plexmediamanager|Icon=/usr/share/pixmaps/plexmediamanager\.png|' usr/share/applications/plexmediamanager.desktop
   wrapper:
     plugin: dump
