@@ -16,6 +16,7 @@ apps:
     restart-condition: always
     plugs:
       - home
+      - network
       - network-bind
       - removable-media
 
