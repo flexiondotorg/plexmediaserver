@@ -42,7 +42,7 @@ Using Ubuntu 16.04 or newer do the following:
 ```
 sudo snap install snapcraft --classic
 sudo snap install lxd
-sudo lxd init
+sudo lxd init # accepting the defaults when prompted is fine
 git clone https://github.com/flexiondotorg/plexmediaserver.git
 cd plexmediaserver
 snapcraft cleanbuild
